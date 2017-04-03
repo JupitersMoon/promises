@@ -1,4 +1,5 @@
 var knex = require('./knex')
+
 function getVideo(id) {
   return knex('videos')
     .select(knex.raw('videos.*, users.name as owner_name'))

@@ -4,7 +4,7 @@ function getVideo(id) {
   return knex('videos')
     .select(knex.raw('videos.*, users.name as owner_name'))
     .join('users', 'users.id', 'videos.owner_id')
-    .where('videos.id', 2)
+    .where('videos.id', id)
     .first()
 }
 
